@@ -1,0 +1,55 @@
+.Color {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffe0f0, #ffc9de, #ffb6d9, #ffe0f5);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.Color::before {
+  content: "⚡✨";
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  opacity: 0.3;
+  animation: sparkle 3s ease-in-out infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
+}
+
+/* Estilo para o nav bar */
+.nav-wrapper.rose {
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e) !important;
+  background-size: 200% 200% !important;
+  animation: gradientMove 5s ease infinite !important;
+  box-shadow: 0 4px 15px rgba(255, 154, 158, 0.4) !important;
+}
+
+.nav-wrapper .brand-logo {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

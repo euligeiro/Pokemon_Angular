@@ -1,0 +1,132 @@
+/* search-pokemon.component.css */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  padding: 20px;
+}
+
+.search-card {
+  background: white;
+  border-radius: 30px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(255, 182, 193, 0.3);
+  border: 2px solid #ffb6c1;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.search-title {
+  color: #d46b8c;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.input-field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid #ffd9e6;
+  border-radius: 50px;
+  font-size: 1.1em;
+  outline: none;
+  transition: all 0.3s ease;
+  background: #fff9fc;
+}
+
+.input-field input:focus {
+  border-color: #ffb6c1;
+  box-shadow: 0 0 0 3px rgba(255, 182, 193, 0.2);
+}
+
+.input-field input::placeholder {
+  color: #ffb6c1;
+  opacity: 0.7;
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+  color: #ffb6c1;
+}
+
+.results-collection {
+  margin-top: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid #ffd9e6;
+  background: white;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.results-collection::-webkit-scrollbar {
+  width: 8px;
+}
+
+.results-collection::-webkit-scrollbar-track {
+  background: #ffe6f0;
+}
+
+.results-collection::-webkit-scrollbar-thumb {
+  background: #ffb6c1;
+  border-radius: 10px;
+}
+
+.results-collection::-webkit-scrollbar-thumb:hover {
+  background: #ff9eb0;
+}
+
+.collection-item {
+  display: block;
+  padding: 12px 20px;
+  border-bottom: 1px solid #ffd9e6;
+  color: #d46b8c;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1.1em;
+}
+
+.collection-item:last-child {
+  border-bottom: none;
+}
+
+.collection-item:hover {
+  background: #fff0f5;
+  padding-left: 25px;
+  color: #ff8da1;
+}
+
+.collection-item i {
+  margin-right: 10px;
+  color: #ffb6c1;
+}
+
+.no-results {
+  text-align: center;
+  padding: 30px;
+  color: #d46b8c;
+  font-style: italic;
+}
+
+/* Animação de loading */
+.pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}

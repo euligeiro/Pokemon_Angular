@@ -1,0 +1,28 @@
+<!-- search-pokemon.component.html -->
+<div class="search-container s8 offset-s2">
+  <div class="search-card">
+    <h2 class="search-title">🔍 Rechercher un Pokémon</h2>
+    
+    <div class="input-field">
+      <input
+        #searchBox
+        (keyup)="search(searchBox.value)"
+        placeholder="Nom du Pokémon..."
+        autocomplete="off"
+      />
+      <span class="search-icon">✨</span>
+    </div>
+
+    <div class="results-collection" *ngIf="(pokemons$ | async)?.length">
+      <a *ngFor="let pokemon of pokemons$ | async" 
+         (click)="goToDetail(pokemon)" 
+         class="collection-item">
+        <i>⭐</i> {{ pokemon.name }}
+      </a>
+    </div>
+
+    <div class="no-results" *ngIf="(pokemons$ | async)?.length === 0 && searchBox.value.length > 1">
+      <p>Aucun Pokémon trouvé pour "{{ searchBox.value }}"</p>
+    </div>
+  </div>
+</div>

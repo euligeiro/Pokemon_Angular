@@ -1,0 +1,95 @@
+.ng-valid[required] {
+  border-left: 5px solid #42A948;
+}
+
+.ng-invalid:not(form) {
+  border-left: 5px solid #a94442;
+}
+
+.card-panel {
+  background: white;
+  border-radius: 30px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.3);
+  border: 2px solid #ffb6c1;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+label {
+  color: #d46b8c;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ffd9e6;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #ffb6c1;
+  outline: none;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+input[type="checkbox"] + span {
+  color: #666;
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.type-normal, .type-fire, .type-water, .type-electric, .type-grass,
+.type-ice, .type-fighting, .type-poison, .type-ground, .type-flying,
+.type-psychic, .type-bug, .type-rock, .type-ghost, .type-dark,
+.type-dragon, .type-steel, .type-fairy {
+  padding: 5px 15px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.9em;
+  background: #ffb6c1;  /* Todas as cores iguais por simplicidade */
+  text-align: center;
+}
+
+.btn {
+  background: #ffb6c1;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+.btn:hover:not(:disabled) {
+  background: #ffa0b0;
+  transform: scale(1.05);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.red.accent-1 {
+  background: #ffcdd2;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px 0;
+  color: #b13e5c;
+  font-size: 0.9em;
+}

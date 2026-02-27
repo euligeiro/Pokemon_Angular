@@ -1,0 +1,17 @@
+.Color {
+  min-height: 100vh;
+  background: #ffe6f0; 
+  padding: 20px;
+}
+
+
+.nav-wrapper.rose {
+  background: #ffb6c1 !important; 
+  border-radius: 30px;
+}
+
+.nav-wrapper .brand-logo {
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}

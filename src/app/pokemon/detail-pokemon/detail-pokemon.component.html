@@ -1,0 +1,46 @@
+<div *ngIf="pokemon" class="row">
+    <div class=" col s12 offset-m3 m6">
+        <h2 class="header center">{{ pokemon.name}}</h2>
+        <div class="card horizontal hoverable " pkmnBorderCard="red">
+            <div class="card-image">
+                <img [src]="pokemon.picture" />
+            </div>
+            <div class=" card-stacked">
+                <div class="card-content">
+                    <table class="bordered striped">
+                        <tbody>
+                            <tr>
+                                <td>Nom</td>
+                                <td>{{ pokemon.name }}</td>
+                            </tr>
+                            <tr>
+                                <td>Points de vie</td>
+                                <td>{{ pokemon.hp }}</td>
+                            </tr>
+                            <tr>
+                                <td>Dégâts</td>
+                                <td>{{ pokemon.cp }}</td>
+                            </tr>
+                            <tr>
+                                <td>Types</td>
+                                <td>
+                                    <span *ngFor="let type of pokemon.types"
+                                       class="chip white-text {{ type | pokemonTypeColor }}">{{
+                                        type }}</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td>Date de creation</td>
+                                <td><em>{{ pokemon.created | date: "dd/MM/yyyy"
+                                    }}</em></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-action" >
+                    <a (click)="goToPokemonList()" >Retour</a>
+                    <a (click)="goToEditPokemon(pokemon.id)" >Editer</a>
+                    <a (click)="deletePokemon(pokemon.id)" >Supprimer</a>
+            </div>
+    </div>     
+<h4 *ngIf="!pokemon"><app-loader></app-loader></h4>
